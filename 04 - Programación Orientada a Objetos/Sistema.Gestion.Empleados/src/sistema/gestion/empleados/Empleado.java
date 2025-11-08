@@ -8,7 +8,7 @@ public class Empleado {
     private String nombre;
     private String puesto;
     private double salario = 1200000;
-    private static int totalEmpleados = 0;
+    private static int TOTALEMPLEADOS = 0;
 
     // Constructores
     public Empleado(int id, String nombre, String puesto, double salario) {
@@ -16,7 +16,7 @@ public class Empleado {
         setNombre(nombre);
         setPuesto(puesto);
         setSalario(salario);
-        totalEmpleados++;
+        TOTALEMPLEADOS++;
     }
     
     public Empleado(String nombre, String puesto){
@@ -24,7 +24,7 @@ public class Empleado {
         setNombre(nombre);
         setPuesto(puesto);
         this.salario = salario;
-        totalEmpleados++;
+        TOTALEMPLEADOS++;
     }
     // Setters
     public void setId(int id){
@@ -66,7 +66,7 @@ public class Empleado {
     }
     
     public static void mostrarTotalEmpleados(){
-        System.out.println("Total de Empleados registrados: " + Empleado.totalEmpleados); 
+        System.out.println("Total de Empleados registrados: " + Empleado.TOTALEMPLEADOS); 
     }
     
     @Override
